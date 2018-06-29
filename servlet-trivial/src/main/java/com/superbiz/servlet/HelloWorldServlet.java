@@ -28,23 +28,22 @@ import java.io.IOException;
 
 /**
  * request with curl would look like
- *
+ * <p>
  * http://localhost:8080/?value=HalloNase
- *
  */
 @WebServlet("/*")
 public class HelloWorldServlet extends HttpServlet {
 
 
-  @Inject private UpperCaseService service;
+    @Inject private UpperCaseService service;
 
-  public void doGet(HttpServletRequest request,
-                    HttpServletResponse response)
-      throws IOException {
-    response.setContentType("text/plain; charset=utf-8");
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response)
+        throws IOException {
+        response.setContentType("text/plain; charset=utf-8");
 
-    String value = request.getParameter("value");
+        String value = request.getParameter("value");
 
-    response.getWriter().println(service.upperCase(value));
-  }
+        response.getWriter().println(service.upperCase(value));
+    }
 }

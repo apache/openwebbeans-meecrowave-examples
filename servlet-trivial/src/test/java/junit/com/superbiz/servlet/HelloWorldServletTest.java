@@ -32,22 +32,22 @@ import static org.junit.Assert.assertEquals;
 
 public class HelloWorldServletTest {
 
-  @Rule // started once for the class, @Rule would be per method
-  public final MeecrowaveRule rule = new MeecrowaveRule();
+    @Rule // started once for the class, @Rule would be per method
+    public final MeecrowaveRule rule = new MeecrowaveRule();
 
-  @Test
-  public void test001() {
-    final Client client = ClientBuilder.newClient();
-    try {
-      assertEquals("HALLONASE", client.target("http://127.0.0.1:" + rule.getConfiguration().getHttpPort())
-                                      .queryParam("value", "HalloNase")
-                                      .request(APPLICATION_JSON_TYPE)
-                                      .get(String.class)
-                                      .trim());
-    } catch (Exception e) {
-      Assert.fail(e.getMessage());
-    } finally {
-      client.close();
+    @Test
+    public void test001() {
+        final Client client = ClientBuilder.newClient();
+        try {
+            assertEquals("HALLONASE", client.target("http://127.0.0.1:" + rule.getConfiguration().getHttpPort())
+                                            .queryParam("value", "HalloNase")
+                                            .request(APPLICATION_JSON_TYPE)
+                                            .get(String.class)
+                                            .trim());
+        } catch (Exception e) {
+            Assert.fail(e.getMessage());
+        } finally {
+            client.close();
+        }
     }
-  }
 }

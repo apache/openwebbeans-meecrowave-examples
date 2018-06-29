@@ -28,14 +28,14 @@ import com.vaadin.flow.router.Route;
 @Route("")
 public class HelloVaadinV10 extends Composite<Div> {
 
-  public HelloVaadinV10() {
-    final VerticalLayout layout = new VerticalLayout();
-    layout
-        .add(new Button("click me",
-                        event -> layout.add(new Label("clicked again"))
-        ));
-    //set the main Component
-    getContent().add(layout);
+    public HelloVaadinV10() {
+        final VerticalLayout layout = new VerticalLayout();
+        layout
+            .add(new Button("click me",
+                            event -> layout.add(new Label("clicked again"))
+            ));
+        //set the main Component
+        getContent().add(layout);
 
-  }
+    }
 }

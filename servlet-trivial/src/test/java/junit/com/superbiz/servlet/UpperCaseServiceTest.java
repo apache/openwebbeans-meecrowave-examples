@@ -25,8 +25,8 @@ import org.junit.Test;
 
 public class UpperCaseServiceTest {
 
-  @Test
-  public void test001() {
-    Assert.assertEquals("HALLO", new UpperCaseService().upperCase("hallo"));
-  }
+    @Test
+    public void test001() {
+        Assert.assertEquals("HALLO", new UpperCaseService().upperCase("hallo"));
+    }
 }
