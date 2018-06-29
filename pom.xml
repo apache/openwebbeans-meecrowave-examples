@@ -19,68 +19,142 @@
 -->
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation=" http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.apache</groupId>
-        <artifactId>apache</artifactId>
-        <version>18</version>
-    </parent>
+  <parent>
+    <groupId>org.apache</groupId>
+    <artifactId>apache</artifactId>
+    <version>18</version>
+  </parent>
 
-    <groupId>org.apache.meecrowave</groupId>
-    <artifactId>meecrowave-examples</artifactId>
-    <packaging>pom</packaging>
-    <name>Apache Meecrowave Examples</name>
-    <description>A project showing some of the Apache Meecrowave features.</description>
+  <groupId>org.apache.meecrowave</groupId>
+  <artifactId>meecrowave-examples</artifactId>
+  <version>1.2.2-SNAPSHOT</version>
 
-    <modules>
-        <module>rest-trivial</module>
-        <module>rest</module>
-    </modules>
+  <packaging>pom</packaging>
+  <name>Apache Meecrowave Examples</name>
+  <description>A project showing some of the Apache Meecrowave features.</description>
 
-    <properties>
-        <meecrowave.version>1.2.2-SNAPSHOT</meecrowave.version>
-    </properties>
+  <modules>
+    <module>rest-trivial</module>
+    <module>rest</module>
+    <module>servlet-trivial</module>
+    <module>servlet-vaadin-v08</module>
+    <module>servlet-vaadin-v10</module>
+  </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.meecrowave</groupId>
-            <artifactId>meecrowave-core</artifactId>
-            <version>${meecrowave.version}</version>
-        </dependency>
+  <properties>
+    <meecrowave.version>1.2.2-SNAPSHOT</meecrowave.version>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.meecrowave</groupId>
-            <artifactId>meecrowave-junit</artifactId>
-            <version>${meecrowave.version}</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.meecrowave</groupId>
-                <artifactId>meecrowave-maven-plugin</artifactId>
-                <version>${meecrowave.version}</version>
-            </plugin>
-        </plugins>
-    </build>
+    <slf4j.version>1.7.25</slf4j.version>
+    <log4j-api.version>2.11.0</log4j-api.version>
 
-    <distributionManagement>
-        <repository>
-            <id>localhost</id>
-            <url>file://${basedir}/target/repo/</url>
-        </repository>
-        <snapshotRepository>
-            <id>localhost</id>
-            <url>file://${basedir}/target/snapshot-repo/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <jacoco.version>0.8.1</jacoco.version>
+    <pitest.version>1.4.0</pitest.version>
+    <pitest-junit5-plugin.version>0.5</pitest-junit5-plugin.version>
+
+    <junit.version>4.12</junit.version>
+    <junit.jupiter.version>5.1.1</junit.jupiter.version>
+    <junit.platform.version>1.1.1</junit.platform.version>
+
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.meecrowave</groupId>
+      <artifactId>meecrowave-core</artifactId>
+      <version>${meecrowave.version}</version>
+    </dependency>
+
+    <!--jUnit5-->
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
+      <version>${junit.platform.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- Only required to run tests in an IDE that bundles an older version -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- Only required to run tests in an IDE that bundles an older version -->
+    <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--Meecrowave-->
+    <dependency>
+      <groupId>org.apache.meecrowave</groupId>
+      <artifactId>meecrowave-junit</artifactId>
+      <version>${meecrowave.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!--Logger-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.25</version>
+      <!--<scope>test</scope>-->
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.25</version>
+      <!--<scope>test</scope>-->
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-web</artifactId>
+      <version>2.11.0</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.meecrowave</groupId>
+        <artifactId>meecrowave-maven-plugin</artifactId>
+        <version>${meecrowave.version}</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>localhost</id>
+      <url>file://${basedir}/target/repo/</url>
+    </repository>
+    <snapshotRepository>
+      <id>localhost</id>
+      <url>file://${basedir}/target/snapshot-repo/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
