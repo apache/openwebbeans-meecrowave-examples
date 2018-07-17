@@ -72,6 +72,13 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- this package contains the javax APIs for CDI, JAX-RS, JSONP, JSONB and Servlet4 -->
+        <dependency>
+            <groupId>org.apache.meecrowave</groupId>
+            <artifactId>meecrowave-specs-api</artifactId>
+            <version>${meecrowave.version}</version>
+        </dependency>
+
         <!--Vaadin -->
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -82,6 +89,16 @@
 
     <build>
         <plugins>
+            <plugin>
+                <!--
+                    For starting meecrowave via Maven. Just run
+                    $> mvn clean install meecrowave:run
+                -->
+                <groupId>org.apache.meecrowave</groupId>
+                <artifactId>meecrowave-maven-plugin</artifactId>
+                <version>${meecrowave.version}</version>
+            </plugin>
+
             <plugin>
                 <groupId>com.vaadin</groupId>
                 <artifactId>vaadin-maven-plugin</artifactId>

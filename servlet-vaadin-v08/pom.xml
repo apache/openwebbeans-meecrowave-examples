@@ -59,6 +59,46 @@
             <artifactId>vaadin-client-compiled</artifactId>
         </dependency>
 
+        <!-- this package contains the javax APIs for CDI, JAX-RS, JSONP, JSONB and Servlet4 -->
+        <dependency>
+            <groupId>org.apache.meecrowave</groupId>
+            <artifactId>meecrowave-specs-api</artifactId>
+            <version>${meecrowave.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.meecrowave</groupId>
+            <artifactId>meecrowave-core</artifactId>
+            <version>${meecrowave.version}</version>
+        </dependency>
+
+        <!-- our test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit4.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.meecrowave</groupId>
+            <artifactId>meecrowave-junit</artifactId>
+            <version>${meecrowave.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!--
+                    For starting meecrowave via Maven. Just run
+                    $> mvn clean install meecrowave:run
+                -->
+                <groupId>org.apache.meecrowave</groupId>
+                <artifactId>meecrowave-maven-plugin</artifactId>
+                <version>${meecrowave.version}</version>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>
