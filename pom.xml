@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.apache</groupId>
         <artifactId>apache</artifactId>
-        <version>18</version>
+        <version>20</version>
     </parent>
 
     <groupId>org.apache.meecrowave</groupId>
@@ -147,6 +147,7 @@
         </plugins>
     </build>
 
+    <!-- Just to disable any accidential deployment to maven.central -->
     <distributionManagement>
         <repository>
             <id>localhost</id>
