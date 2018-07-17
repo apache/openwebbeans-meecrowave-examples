@@ -1,0 +1,11 @@
+= Apache Meecrowave
+
+== Trivial REST Example
+
+This example shows probably the smallest JavaEE REST Service.
+It is the REST version of the famous 'Hello World' program.
+It contains just a <<src/main/java/com/superbiz/jaxrs/HelloEndpoint.java,Hello Resource>>.
+The important parst of this class are the @Path(`"hello")` and the `@GET' annotated method.
+
+Note that the Resource is a CDI bean annotated with `@ApplicationScoped`.
+Thus only one instance exists.
