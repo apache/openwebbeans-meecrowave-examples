@@ -7,10 +7,10 @@ This project shows how to use https://openwebbeans.apache.org/meecrowave/[Apache
 Apache Meecrowave is a 9 MByte small embeddable Java Application Server based on the following Apache JavaEE 8 projects:
 
 * Apache Tomcat-9.x
-* Apache log4j2
 * Apache OpenWebBeans-2.x
 * Apache Johnzon-1.1.x
-* Apache CXF-3.x
+* Apache CXF-3.2.x
+* Apache log4j2 (optional, JUL supported as well)
 
 
 == About our Examples
@@ -23,6 +23,17 @@ Here's what it provides:
 3. in src/main/java/com/superbiz/configuration/Defaults some enrichment of the meecrowave Cli options for the application.
 
 To use it launch meecrowave main (org.apache.meecrowave.runner.Cli) with option `--app-default-name foo`.
+
+You can also use the `meecrowave-maven-plugin`and type
+
+----
+$> mvn clean install meecrowave:run
+----
+
+For debugging your application attach with your IDE to port 8000 and start Meecrowave in debug mode with
+----
+$> mvnDebug clean install meecrowave:run
+----
 
 == Further Resources
 
