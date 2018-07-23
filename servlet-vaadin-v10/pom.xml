@@ -23,13 +23,13 @@
     <parent>
         <groupId>org.apache.meecrowave</groupId>
         <artifactId>meecrowave-examples</artifactId>
-        <version>1.2.2-SNAPSHOT</version>
+        <version>1.2.3-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>samples-servlet-vaadin-v10</artifactId>
     <name>Servlet (Vaadin - V10)</name>
-
+    <packaging>jar</packaging>
 
     <properties>
         <transpilation.output>${project.build.directory}/build</transpilation.output>
