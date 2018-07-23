@@ -1,0 +1,17 @@
+= Apache Meecrowave
+
+== Bundle Configuration
+
+This example shows how to configure Meecrowave via a property file in a distribution bundle
+
+=== Serving static resources
+The sample contains a link:src/main/resources/META-INF/resources/index.html[static index.html file].
+Since we do not package a WAR file but a simple jar we have to provide the file as a WebResource.
+Since JavaEE 6 (Servlets-3.0) every file under META-INF/resources/ is served as a WebResource.
+If you start up Meecrowave then you can browse this file under http://localhost:8090/index.html
+
+=== meecrowave.properties
+To configure Apache Meecrowave you can leverage the provided meecrowave.properties file support.
+This file can either reside in `src/main/meecrowave/conf` or in the ClassPath.
+Please see the documentation in the link:src/main/resources/meecrowave.properties[meecrowave.properties] file for more explanation about what can get configured.
+
