@@ -29,7 +29,7 @@
 
     <groupId>org.apache.meecrowave</groupId>
     <artifactId>meecrowave-examples</artifactId>
-    <version>1.2.3-SNAPSHOT</version>
+    <version>1.2.5-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>Apache Meecrowave Examples</name>
@@ -46,7 +46,7 @@
     </modules>
 
     <properties>
-        <meecrowave.version>1.2.3</meecrowave.version>
+        <meecrowave.version>1.2.4</meecrowave.version>
 
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
