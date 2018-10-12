@@ -37,6 +37,7 @@
 
     <modules>
         <module>rest-trivial</module>
+        <module>rest-trivial-kotlin</module>
         <module>rest</module>
         <module>servlet-trivial</module>
         <module>mw_bundle_config</module>
