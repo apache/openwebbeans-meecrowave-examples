@@ -1,0 +1,11 @@
+= Apache Meecrowave
+
+== Trivial REST Example (rewritten in Kotlin)
+
+This example shows probably the smallest JavaEE REST Service.
+It is the REST version of the famous 'Hello World' program.
+It contains just a link:src/main/kotlin/com/superbiz/jaxrs/HelloEndpoint.kt[Hello Resource].
+The important part of this class are the `@Path("helloKotlin")` and the `@GET' annotated method.
+
+Note that the Resource is a CDI bean annotated with `@ApplicationScoped`.
+Thus only one instance exists.
