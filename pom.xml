@@ -29,7 +29,7 @@
 
     <groupId>org.apache.meecrowave</groupId>
     <artifactId>meecrowave-examples</artifactId>
-    <version>1.2.5-SNAPSHOT</version>
+    <version>1.2.7-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>Apache Meecrowave Examples</name>
@@ -47,7 +47,7 @@
     </modules>
 
     <properties>
-        <meecrowave.version>1.2.5</meecrowave.version>
+        <meecrowave.version>1.2.6</meecrowave.version>
 
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -57,7 +57,7 @@
         <slf4j.version>1.7.25</slf4j.version>
         <log4j-api.version>2.11.0</log4j-api.version>
 
-        <jacoco.version>0.8.1</jacoco.version>
+        <jacoco.version>0.8.3</jacoco.version>
         <pitest.version>1.4.0</pitest.version>
         <pitest-junit5-plugin.version>0.5</pitest-junit5-plugin.version>
 
