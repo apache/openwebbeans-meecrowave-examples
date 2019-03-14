@@ -23,15 +23,15 @@
     <parent>
         <groupId>org.apache.meecrowave</groupId>
         <artifactId>meecrowave-examples</artifactId>
-        <version>1.2.5-SNAPSHOT</version>
+        <version>1.2.7-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>samples-servlet-vaadin-v08</artifactId>
-    <name>Servlet (Vaadin - V08)</name>
+    <name>Servlet (Vaadin - V08 (LTS))</name>
 
   <properties>
-    <vaadin.version>8.4.5</vaadin.version>
+    <vaadin.version>8.7.0</vaadin.version>
   </properties>
 
   <packaging>jar</packaging>
@@ -78,12 +78,6 @@
         </dependency>
 
         <!-- our test dependencies -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit4.version}</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.apache.meecrowave</groupId>
             <artifactId>meecrowave-junit</artifactId>
