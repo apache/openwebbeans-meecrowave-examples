@@ -43,6 +43,7 @@
         <module>mw_bundle_config</module>
         <module>servlet-vaadin-v08</module>
         <module>servlet-vaadin-v10</module>
+        <module>servlet-vaadin-vxx</module>
         <module>docker</module>
     </modules>
 
