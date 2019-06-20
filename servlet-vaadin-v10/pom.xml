@@ -23,7 +23,7 @@
   <parent>
     <groupId>org.apache.meecrowave</groupId>
     <artifactId>meecrowave-examples</artifactId>
-    <version>1.2.7-SNAPSHOT</version>
+    <version>1.2.8-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
@@ -33,7 +33,7 @@
 
   <properties>
     <transpilation.output>${project.build.directory}/build</transpilation.output>
-    <vaadin.version>10.0.11</vaadin.version>
+    <vaadin.version>10.0.16</vaadin.version>
   </properties>
 
   <pluginRepositories>
@@ -99,34 +99,34 @@
         <version>${meecrowave.version}</version>
       </plugin>
 
-      <plugin>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-maven-plugin</artifactId>
-        <version>${vaadin.version}</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>copy-production-files</goal>
-              <goal>package-for-production</goal>
-            </goals>
-            <configuration>
-              <transpileOutputDirectory>${transpilation.output}</transpileOutputDirectory>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.vaadin</groupId>-->
+<!--        <artifactId>vaadin-maven-plugin</artifactId>-->
+<!--        <version>${vaadin.version}</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <goals>-->
+<!--              <goal>copy-production-files</goal>-->
+<!--              <goal>package-for-production</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <transpileOutputDirectory>${transpilation.output}</transpileOutputDirectory>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.2</version>
-        <configuration>
-          <webResources>
-            <resource>
-              <directory>${transpilation.output}</directory>
-            </resource>
-          </webResources>
-        </configuration>
+<!--        <configuration>-->
+<!--          <webResources>-->
+<!--            <resource>-->
+<!--              <directory>${transpilation.output}</directory>-->
+<!--            </resource>-->
+<!--          </webResources>-->
+<!--        </configuration>-->
       </plugin>
     </plugins>
   </build>
