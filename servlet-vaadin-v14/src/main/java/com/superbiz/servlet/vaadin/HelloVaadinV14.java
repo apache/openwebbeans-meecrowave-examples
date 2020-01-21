@@ -26,10 +26,10 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
 @Route("")
-public class HelloVaadinVLatest
+public class HelloVaadinV14
     extends Composite<VerticalLayout> {
 
-  public HelloVaadinVLatest() {
+  public HelloVaadinV14() {
     getContent()
         .add(new Button("click me",
                         event -> getContent().add(new Label("clicked again"))
