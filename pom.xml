@@ -48,7 +48,7 @@
     </modules>
 
     <properties>
-        <meecrowave.version>1.2.8</meecrowave.version>
+        <meecrowave.version>1.2.12-SNAPSHOT</meecrowave.version>
 
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
