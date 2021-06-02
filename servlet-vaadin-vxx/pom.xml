@@ -14,7 +14,7 @@
   <packaging>jar</packaging>
 
   <properties>
-    <vaadin.version>14.0.0.rc1</vaadin.version>
+    <vaadin.version>14.5.1</vaadin.version>
   </properties>
 
   <pluginRepositories>
