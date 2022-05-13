@@ -31,7 +31,7 @@
     <name>Servlet (Vaadin - V08 (LTS))</name>
 
   <properties>
-    <vaadin.version>8.8.2</vaadin.version>
+    <vaadin.version>8.14.1</vaadin.version>
   </properties>
 
   <packaging>jar</packaging>
