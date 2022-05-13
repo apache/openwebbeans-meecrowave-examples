@@ -33,7 +33,7 @@
 
   <properties>
     <transpilation.output>${project.build.directory}/build</transpilation.output>
-    <vaadin.version>10.0.16</vaadin.version>
+    <vaadin.version>10.0.19</vaadin.version>
   </properties>
 
   <pluginRepositories>
